@@ -29,3 +29,19 @@ See the [CONTRIBUTING](../CONTRIBUTING.md) document for contribution, testing an
 This project is licensed under the GNU Lesser General Public License v3.0. See the [LICENSE](../LICENSE) file for details.
 
 
+## Execution
+
+cd tokenbridge/deployment
+
+ansible-playbook -e 'ansible_python_interpreter=/usr/bin/python3' -i hosts.yml site.yml
+
+ansible-playbook -e 'ansible_python_interpreter=/usr/bin/python3' -i hosts_sokol.yml site.yml
+
+ansible-playbook -e 'ansible_python_interpreter=/usr/bin/python3' -i hosts_ela.yml site.yml
+
+## Logs
+
+/var/log/docker/
+
+tail -f collected_1/docker.log 
+
